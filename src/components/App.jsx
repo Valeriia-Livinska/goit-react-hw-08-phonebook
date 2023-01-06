@@ -7,6 +7,8 @@ import { Title, Subtitle } from './App.styled';
 import { Box } from './Box';
 import { fetchContacts } from 'redux/operations';
 import { getError, getIsLoading } from 'redux/selectors';
+import { Spinner } from './Spinner/Spinner';
+
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -31,8 +33,7 @@ export const App = () => {
 
       <Subtitle>contacts</Subtitle>
       <Filter />
-      {isLoading && !error && <b>Request is in progress...</b>}
-      <ContactList />
+      {(isLoading && !error) ? <Spinner /> : <ContactList/>}
     </Box>
   );
 };
