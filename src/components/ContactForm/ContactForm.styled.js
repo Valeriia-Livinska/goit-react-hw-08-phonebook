@@ -55,4 +55,8 @@ export const SubmitButton = styled.button`
     box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%),
       0px 2px 2px rgb(0 0 0 / 12%);
   }
+
+  &:disabled {
+    background-color: ${p => p.theme.colors.border};
+  }
 `;

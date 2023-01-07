@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from 'redux/selectors';
+import { getContacts, getIsLoading } from 'redux/selectors';
 import { addContact } from 'redux/operations';
 // import { nanoid } from 'nanoid';
 import { Form, Input, SubmitButton } from './ContactForm.styled';
@@ -11,6 +11,7 @@ export const ContactForm = () => {
   const [number, setNumber] = useState('');
 
   const contacts = useSelector(getContacts);
+  const isLoading = useSelector(getIsLoading);
   const dispatch = useDispatch();
 
   const handleNameChange = event => {
@@ -74,7 +75,7 @@ export const ContactForm = () => {
         </label>
       </Box>
 
-      <SubmitButton type="submit">Add contact</SubmitButton>
+      <SubmitButton type="submit" disabled={isLoading}>Add contact</SubmitButton>
     </Form>
   );
 };
