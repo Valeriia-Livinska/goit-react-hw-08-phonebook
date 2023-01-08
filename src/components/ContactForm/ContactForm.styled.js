@@ -4,7 +4,7 @@ export const Form = styled.form`
   padding-top: ${p => p.theme.space[5]}px;
   padding-bottom: ${p => p.theme.space[5]}px;
 
-  width: 100%;
+  // width: 100%;
 
   border-top: ${p => p.theme.borders.medium} ${p => p.theme.colors.border};
   border-bottom: ${p => p.theme.borders.medium} ${p => p.theme.colors.border};

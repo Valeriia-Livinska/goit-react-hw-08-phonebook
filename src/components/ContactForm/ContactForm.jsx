@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts, getIsLoading } from 'redux/selectors';
-import { addContact } from 'redux/operations';
+import { getContacts, getIsLoading } from 'redux/contacts/selectors';
+import { addContact } from 'redux/contacts/operations';
 // import { nanoid } from 'nanoid';
 import { Form, Input, SubmitButton } from './ContactForm.styled';
 import { Box } from 'components/Box';
@@ -49,7 +49,7 @@ export const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Box justifyContent="space-between">
+      <Box justifyContent="space-between" width={600}>
         <label>
           Name
           <Input
@@ -75,7 +75,9 @@ export const ContactForm = () => {
         </label>
       </Box>
 
-      <SubmitButton type="submit" disabled={isLoading}>Add contact</SubmitButton>
+      <SubmitButton type="submit" disabled={isLoading}>
+        Add contact
+      </SubmitButton>
     </Form>
   );
 };
