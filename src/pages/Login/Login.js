@@ -8,7 +8,7 @@ export default function Login() {
       flexDirection="column"
       alignItems="center"
       mt={5}>
-      <Title>Login Form</Title>
+      <Title>Login</Title>
       <LoginForm />
     </Box>
   );

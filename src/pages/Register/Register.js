@@ -5,7 +5,7 @@ import { Box } from 'components/Box';
 export default function Register() {
   return (
     <Box flexDirection="column" alignItems="center" mt={5}>
-      <Title>Registration Form</Title>
+      <Title>Registration</Title>
       <RegisterForm />
     </Box>
   );

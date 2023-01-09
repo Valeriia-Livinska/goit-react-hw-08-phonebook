@@ -26,10 +26,7 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
-const contactsPersistedReducer = persistReducer(
-  contactPersistConfig,
-  contactsReducer
-);
+const contactsPersistedReducer = persistReducer(contactPersistConfig,contactsReducer);
 
 const authPersistedReducer = persistReducer(authPersistConfig, authReducer);
 

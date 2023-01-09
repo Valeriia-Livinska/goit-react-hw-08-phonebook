@@ -8,7 +8,9 @@ export const Navigation = () => {
   return (
     <nav>
       <Box gridGap={4}>
-        <HeaderNavLink to="/">Home</HeaderNavLink>
+        <HeaderNavLink to="/">
+          Home
+        </HeaderNavLink>
         {isLoggedIn && <HeaderNavLink to="/contacts">Contacts</HeaderNavLink>}
       </Box>
     </nav>

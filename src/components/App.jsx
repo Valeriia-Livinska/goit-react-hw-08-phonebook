@@ -6,6 +6,8 @@ import { Route, Routes } from 'react-router-dom';
 import { RestrictedRoute } from './RestrictedRoute';
 import { Layout } from './Layout';
 import { PrivateRoute } from './PrivateRoute';
+import { Spinner } from './Spinner/Spinner';
+import { Box } from './Box';
 
 const HomePage = lazy(() => import('../pages/Home/Home'));
 const RegisterPage = lazy(() => import('../pages/Register/Register'));
@@ -21,7 +23,9 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <Box flexDirection='column' alignItems='center' mt={8}>
+      <Spinner />
+    </Box>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>

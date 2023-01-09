@@ -8,14 +8,17 @@ export const HeaderNavLink = styled(NavLink)`
   font-weight: ${p => p.theme.fontWeights.bold};
 
   border-radius: ${p => p.theme.radii.normal};
-  //   background-color: ${p => p.theme.colors.hoverPink};
   border: ${p => p.theme.borders.medium} ${p => p.theme.colors.border};
 
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-bottom-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    color: ${p => p.theme.colors.textColorized};
+    border-bottom-color: ${p => p.theme.colors.accentPink};
+  }
+
+  &.active {
+    border-bottom-color: ${p => p.theme.colors.accentPink};
   }
 `;
