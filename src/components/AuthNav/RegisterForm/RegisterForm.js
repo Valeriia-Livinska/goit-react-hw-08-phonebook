@@ -37,12 +37,18 @@ export const RegisterForm = () => {
 
           <LabelReg>
             Email
-            <InputReg type="email" name="email" />
+            <InputReg type="email" name="email" required />
           </LabelReg>
 
           <LabelReg>
             Password
-            <InputReg type="password" name="password" />
+            <InputReg
+              type="password"
+              name="password"
+              minlength="7"
+              title="Password must contain at least 7 characters"
+              required
+            />
           </LabelReg>
         </Box>
         <SubmitButton type="submit">Register</SubmitButton>
