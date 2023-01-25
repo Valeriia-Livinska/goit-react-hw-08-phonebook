@@ -5,10 +5,9 @@ export const SlideEffect = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
+  min-height: 100vh;
   overflow: hidden;
   width: 100%;
-  height: 80px;
 `;
 
 export const Text = styled.div`

@@ -5,7 +5,7 @@ export default function Home() {
     <SlideEffect>
       <Text>Welcome</Text>
       <SlideDown>to the</SlideDown>
-      <SlideUp>Contact manager page</SlideUp>
+      <SlideUp>Phonebook App</SlideUp>
     </SlideEffect>
   );
 }
