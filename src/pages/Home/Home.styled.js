@@ -5,7 +5,7 @@ export const SlideEffect = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 85vh;
   overflow: hidden;
   width: 100%;
 `;

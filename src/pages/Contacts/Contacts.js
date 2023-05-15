@@ -1,4 +1,4 @@
-import { Subtitle, Title } from 'components/App.styled';
+import { Subtitle, Title } from 'App.styled';
 import { Box } from 'components/Box';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/Contactlist';
@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { getError, getIsLoading } from 'redux/contacts/selectors';
 
-
 export default function Tasks() {
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
@@ -19,21 +18,21 @@ export default function Tasks() {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-    return (
-      <Box
-        flexDirection="column"
-        alignItems="center"
-        mt={5}
-        mb={0}
-        mx="auto"
-        maxWidth={700}
-      >
-        <Title>Phonebook</Title>
-        <ContactForm />
+  return (
+    <Box
+      flexDirection="column"
+      alignItems="center"
+      mt={5}
+      mb={0}
+      mx="auto"
+      maxWidth={700}
+    >
+      <Title>Phonebook</Title>
+      <ContactForm />
 
-        <Subtitle>contacts</Subtitle>
-        <Filter />
-        {isLoading && !error ? <Spinner /> : <ContactList />}
-      </Box>
-    );
+      <Subtitle>contacts</Subtitle>
+      <Filter />
+      {isLoading && !error ? <Spinner /> : <ContactList />}
+    </Box>
+  );
 }

@@ -3,16 +3,16 @@ import { useEffect, lazy } from 'react';
 import { selectIsRefreshing } from 'redux/auth/authSelectors';
 import { refreshUser } from 'redux/auth/authOperations';
 import { Route, Routes } from 'react-router-dom';
-import { RestrictedRoute } from './RestrictedRoute';
-import { Layout } from './Layout';
-import { PrivateRoute } from './PrivateRoute';
-import { Spinner } from './Spinner/Spinner';
-import { Box } from './Box';
+import { RestrictedRoute } from './components/RestrictedRoute';
+import { Layout } from './components/Layout';
+import { PrivateRoute } from './components/PrivateRoute';
+import { Spinner } from './components/Spinner/Spinner';
+import { Box } from './components/Box';
 
-const HomePage = lazy(() => import('../pages/Home/Home'));
-const RegisterPage = lazy(() => import('../pages/Register/Register'));
-const LoginPage = lazy(() => import('../pages/Login/Login'));
-const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
+const HomePage = lazy(() => import('./pages/Home/Home'));
+const RegisterPage = lazy(() => import('./pages/Register/Register'));
+const LoginPage = lazy(() => import('./pages/Login/Login'));
+const ContactsPage = lazy(() => import('./pages/Contacts/Contacts'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <Box flexDirection='column' alignItems='center' mt={8}>
+    <Box flexDirection="column" alignItems="center" mt={8}>
       <Spinner />
     </Box>
   ) : (

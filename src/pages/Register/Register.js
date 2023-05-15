@@ -1,4 +1,4 @@
-import { Title } from 'components/App.styled';
+import { Title } from 'App.styled';
 import { RegisterForm } from 'components/AuthNav/RegisterForm/RegisterForm';
 import { Box } from 'components/Box';
 
